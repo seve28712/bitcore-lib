@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86c2acd3-36a5-4e55-89bc-b96ace521375" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitcore-lib.js" beforeDir="false" afterPath="$PROJECT_DIR$/bitcore-lib.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hdpublickey.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hdpublickey.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/hdpublickey.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/hdpublickey.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,17 +17,26 @@
       <file leaf-file-name="hdpublickey.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/hdpublickey.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5425">
-              <caret line="171" column="18" lean-forward="true" selection-start-line="171" selection-start-column="18" selection-end-line="171" selection-end-column="18" />
+            <state relative-caret-position="294">
+              <caret line="121" column="3" lean-forward="true" selection-start-line="121" selection-start-column="3" selection-end-line="121" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hdpublickey.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hdpublickey.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/hdpublickey.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="286" column="21" lean-forward="true" selection-start-line="286" selection-start-column="21" selection-end-line="286" selection-end-column="21" />
+            <state relative-caret-position="666">
+              <caret line="287" selection-start-line="287" selection-end-line="287" />
             </state>
           </provider>
         </entry>
@@ -64,6 +70,7 @@
       <list>
         <option value="$PROJECT_DIR$/lib/hdpublickey.js" />
         <option value="$PROJECT_DIR$/test/hdpublickey.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -198,9 +205,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HDPublicKey_interface_derivation_derives_a_bunch_of_pubkeys_at_once - 2020.04.15 at 12h 39m 49s.xml">
-      <configuration name="HDPublicKey interface.derivation.derives a bunch of pubkeys at once" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="HDPublicKey_interface_derivation_derives_a_bunch_of_pubkeys_at_once - 2020.04.15 at 12h 40m 32s.xml">
       <configuration name="HDPublicKey interface.derivation.derives a bunch of pubkeys at once" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -228,6 +232,9 @@
     <history-entry file="publickey - 2020.04.15 at 12h 48m 04s.xml">
       <configuration name="publickey" configurationId="mocha-javascript-test-runner" />
     </history-entry>
+    <history-entry file="HDPublicKey_interface_derivation_deriveBunch_derives_same_keys - 2020.04.15 at 13h 01m 45s.xml">
+      <configuration name="HDPublicKey interface.derivation.deriveBunch derives same keys" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="25" width="1867" height="1055" extended-state="6" />
@@ -239,8 +246,8 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.329718" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986272" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.329718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24986272" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
@@ -264,18 +271,33 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="mocha-javascript-test-runner">
-        <watch expression="pub1.publicKey.toBuffer().toString('base64')" language="JavaScript" />
-        <watch expression="pub2[0].publicKey.toBuffer().toString('base64')" language="JavaScript" />
-        <watch expression="pub2[1].publicKey.toBuffer().toString('base64')" language="JavaScript" />
+        <watch expression="arr1[0].xpubkey" language="JavaScript" />
+        <watch expression="arr2[0].xpubkey" language="JavaScript" />
+        <watch expression="k.xpubkey" language="JavaScript" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>k.xpubkey</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>arr2[0].xpubkey</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>arr1[0].xpubkey</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>pub1.publicKey.toBuffer().toString('base64')</expression-string>
         <language-id>JavaScript</language-id>
@@ -312,17 +334,24 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/hdpublickey.js">
+    <entry file="file://$PROJECT_DIR$/test/hdpublickey.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5425">
-          <caret line="171" column="18" lean-forward="true" selection-start-line="171" selection-start-column="18" selection-end-line="171" selection-end-column="18" />
+        <state relative-caret-position="666">
+          <caret line="287" selection-start-line="287" selection-end-line="287" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/hdpublickey.js">
+    <entry file="file://$PROJECT_DIR$/lib/hdpublickey.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="286" column="21" lean-forward="true" selection-start-line="286" selection-start-column="21" selection-end-line="286" selection-end-column="21" />
+        <state relative-caret-position="294">
+          <caret line="121" column="3" lean-forward="true" selection-start-line="121" selection-start-column="3" selection-end-line="121" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
