@@ -271,5 +271,21 @@ describe('HDPublicKey interface', function() {
       valid = HDPublicKey.isValidPath(HDPublicKey.Hardened);
       valid.should.equal(false);
     });
+
+    it('derives a bunch of pubkeys at once', function() {
+      const strPubKeyFromMnemonic = 'xpub6BthAdw7MqCSNLUzGuzHsCGV5xCo8kkJUor4AoUK9qzdcTnXX3qaiWqCDfJQJqnhCPS6g1XS5AmqJRYDWd5kQcHX4icXy1mCJho6cUsKYWh';
+      const pubkey = new HDPublicKey(strPubKeyFromMnemonic);
+      const pub1 = pubkey.derive('m/0/1');
+      const pub2 = pubkey.deriveBunch(0,1,1);
+      pub1.xpubkey.should.equal(pub2[0].xpubkey);
+    });
+
+    it('derives same keys with deriveBunch and derive', function() {
+      const strPubKeyFromMnemonic = 'xpub6BthAdw7MqCSNLUzGuzHsCGV5xCo8kkJUor4AoUK9qzdcTnXX3qaiWqCDfJQJqnhCPS6g1XS5AmqJRYDWd5kQcHX4icXy1mCJho6cUsKYWh';
+      const pubkey = new HDPublicKey(strPubKeyFromMnemonic);
+      const arr1 = [1,2,3,4,5].map(x => pubkey.derive(`m/0/${x}`));
+      const arr2 = pubkey.deriveBunch(0, 1, 5);
+      assert.deepEqual(arr1, arr2);
+    });
   });
 });
